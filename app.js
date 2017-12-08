@@ -4,6 +4,17 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var firebase = require("firebase");
+
+var config = {
+  apiKey: "AIzaSyAgOzAXJwZWDIb_B0KNjRkpPpxjzz8ITZQ",
+  authDomain: "authcreative.firebaseapp.com",
+  databaseURL: "https://authcreative.firebaseio.com",
+  projectId: "authcreative",
+  storageBucket: "authcreative.appspot.com",
+  messagingSenderId: "492974937698"
+};
+firebase.initializeApp(config);
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

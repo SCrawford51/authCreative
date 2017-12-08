@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script src="/javascripts/app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body ng-app='app' ng-controller='mainCtrl'>
+    <div class="top">
+        <h1 id: "title"> Welcome {{Name}}</h1>
+    </div>
+
+    <div class="left">
+
+        <h4>Links to Classes</h4>
+        <ul ng-repeat='link in links'>
+            {{link.link}}
+        </ul>
+    </div>
+
+    <div class="main">
+        <h2>
+            <src='{{image.url}}'></src>
+        </h2>
+        <hr>
+
+        <h3>Useful Links</h3>
+
+        <ul ng-repeat='main in links'>
+            <li>{{main.link}}</li>
+        </ul>
+
+    </div>
+</body>
+
+</html>
