@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+    <title>Task List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script src="javascripts/my_app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet">
+    <link rel="stylesheet" type "text/css" href="stylesheets/style.css">
+</head>
+
+<body>
+    <div ng-controller="myController">
+        <a id="logoutLink" href="/logout">logout</a>
+        <a id="editLink" href="/user">Edit User</a>
+        <p>
+            <h1>Enter a New Task</h1>
+            <div id='myApp' ng-app='myApp' ng-controller='mainCtrl'>
+
+                <form id="newTask" ng-submit="addTask()">
+                    <input type="text" ng-model="Task" value="">
+                    <select ng-model="Priority">
+                        <option value="5">Very High</option>
+                        <option value="4">High</option>
+                        <option value="3">Moderate</option>
+                        <option value="2">Low</option>
+                        <option value="1">Very Low</option>
+                    </select>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="checkList">
+                    <ul>
+                        <li ng-repeat="list in taskList | orderBy: '-priority'" class="items">
+                            <input type="checkbox" ng-model="list.check" ng-click="removeTask(list)">{{list.task}}
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+    </div>
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <script src="/javascripts/my_app.js"></script>
+</body>
+
+</html>

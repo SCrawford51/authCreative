@@ -1,0 +1,194 @@
+nohup: ignoring input
+before / Route
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2018-01-06T08:21:21.093Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  user: '5a25cfb42377dc2365011867',
+  username: 'Sean',
+  msg: 'Authenticated as Sean',
+  color: 'Green' }
+/ Route if user
+[0mGET / [32m200 [0m13.814 ms - 798[0m
+[0mGET /stylesheets/style.css [36m304 [0m4.319 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m5.289 ms - -[0m
+[0mGET /user/profile [36m304 [0m13.900 ms - -[0m
+[0mGET /favicon.ico [33m404 [0m1.393 ms - 215[0m
+/logout Route
+[0mGET /logout [36m302 [0m4.834 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m1.169 ms - 756[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.202 ms - -[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2018-01-06T16:38:54.707Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true } }
+/ Route else user
+[0mGET / [36m302 [0m1.478 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m1.140 ms - 770[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.328 ms - -[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2018-01-06T16:39:01.870Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  msg: 'Access denied!' }
+/ Route else user
+[0mGET / [36m302 [0m1.758 ms - 56[0m
+/login Route
+[0mGET /login [36m304 [0m1.899 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.067 ms - -[0m
+[0mGET /favicon.ico [33m404 [0m0.999 ms - 215[0m
+login
+{ _id: 5a25cfb42377dc2365011867,
+  email: 'sheath51@gmail.com',
+  hashed_password: 'AxtK9Rl+wwqSb0jPQOEafbxHAEiiHkADt6PAfF2rG6o=',
+  username: 'Sean',
+  __v: 0,
+  color: 'Green' }
+[0mPOST /login [36m302 [0m23.118 ms - 46[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2018-01-07T04:08:23.749Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  user: '5a25cfb42377dc2365011867',
+  username: 'Sean',
+  msg: 'Authenticated as Sean',
+  color: 'Green' }
+/ Route if user
+[0mGET / [32m200 [0m1.708 ms - 798[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.756 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m2.737 ms - -[0m
+[0mGET /user/profile [36m304 [0m2.960 ms - -[0m
+/user Route
+[0mGET /user [32m200 [0m1.111 ms - 1275[0m
+[0mGET /javascripts/my_app.js [36m304 [0m1.632 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.879 ms - -[0m
+[0mGET /user/profile [36m304 [0m2.880 ms - -[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2018-01-07T04:08:27.290Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  user: '5a25cfb42377dc2365011867',
+  username: 'Sean',
+  msg: 'Authenticated as Sean',
+  color: 'Green' }
+/ Route if user
+[0mGET / [36m304 [0m1.027 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.698 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m0.842 ms - -[0m
+[0mGET /user/profile [36m304 [0m1.831 ms - -[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2018-01-07T10:17:34.041Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true } }
+/ Route else user
+[0mGET / [36m302 [0m1.919 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m0.716 ms - 770[0m
+[0mGET /stylesheets/style.css [32m200 [0m2.422 ms - 110[0m
+[0mGET /favicon.ico [33m404 [0m1.070 ms - 215[0m
+[0mPOST /login [36m302 [0m2.771 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m0.743 ms - 771[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.827 ms - -[0m
+/signup Route
+[0mGET /signup [32m200 [0m4.331 ms - 841[0m
+[0mGET /stylesheets/style.css [36m304 [0m9.019 ms - -[0m
+Begin exports.signup
+after new user exports.signup
+after hashing user exports.signup
+after email user exports.signup
+(node:2210) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+In exports.signup
+null
+[0mPOST /signup [36m302 [0m14.866 ms - 46[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2018-01-07T10:18:13.252Z,
+     originalMaxAge: 2627999999,
+     httpOnly: true },
+  msg: 'Authenticated as johny_lingo',
+  user: '5a29da45551c42a20880167b',
+  username: 'johny_lingo' }
+/ Route if user
+[0mGET / [32m200 [0m2.421 ms - 807[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.453 ms - -[0m
+[0mGET /javascripts/my_app.js [32m200 [0m2.163 ms - 515[0m
+[0mGET /user/profile [32m200 [0m3.522 ms - 161[0m
+/user Route
+[0mGET /user [32m200 [0m0.990 ms - 1282[0m
+[0mGET /javascripts/my_app.js [36m304 [0m8.634 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m8.630 ms - -[0m
+[0mGET /user/profile [36m304 [0m1.349 ms - -[0m
+[0mPOST /user/update [36m302 [0m4.825 ms - 54[0m
+/user Route
+[0mGET /user [32m200 [0m0.796 ms - 1267[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.768 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m1.882 ms - -[0m
+[0mGET /user/profile [32m200 [0m2.310 ms - 178[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2018-01-07T10:18:56.770Z,
+     originalMaxAge: 2627999999,
+     httpOnly: true },
+  msg: 'User Updated.',
+  user: '5a29da45551c42a20880167b',
+  username: 'johny_lingo',
+  color: 'Maroon' }
+/ Route if user
+[0mGET / [32m200 [0m0.986 ms - 798[0m
+[0mGET /stylesheets/style.css [36m304 [0m4.190 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m4.206 ms - -[0m
+[0mGET /user/profile [36m304 [0m1.649 ms - -[0m
+/logout Route
+[0mGET /logout [36m302 [0m0.946 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m2.815 ms - 756[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.901 ms - -[0m
+login
+{ _id: 5a29da45551c42a20880167b,
+  email: 'islander@gmail.com',
+  hashed_password: 'jDm2PD6d9hRNuxxOCx4xN10SiMJlzACh/FJzIRztsvk=',
+  username: 'johny_lingo',
+  __v: 0,
+  color: 'Maroon' }
+[0mPOST /login [36m302 [0m2.084 ms - 46[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2018-01-07T10:19:07.050Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  user: '5a29da45551c42a20880167b',
+  username: 'johny_lingo',
+  msg: 'Authenticated as johny_lingo',
+  color: 'Maroon' }
+/ Route if user
+[0mGET / [32m200 [0m0.911 ms - 813[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.243 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m1.951 ms - -[0m
+[0mGET /user/profile [36m304 [0m1.219 ms - -[0m

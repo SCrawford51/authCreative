@@ -1,48 +1,119 @@
-body
-{
-background-color: gray;
-font-size:30px;
+h1{
+  /*
+ background-image: url(header.png); 
+  background-repeat: round round;
+  background-size: contain;*/
+  font-size: 100px;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  height: 100px;
+  text-align: center;
+  color: #3759A0;
+  text-shadow: 2px 2px 20px #E679AD;
 }
-h1
-{
-text-align:center;
-font-size:200%;
+/*
+#light-blue{
+  background-image: url(light-blue.png);
+  height: 15px;
+  background-repeat: repeat repeat;
 }
-h2
-{
-background-color: gray;
-background-repeat: no-repeat;
-background-size:cover;
-padding-bottom: 40%;
-}
-ul
-{
-border-style:solid;
-}
-h3
-{
-border-style:solid;
-border-color:indigo;
-}
-h4
-{
-border-style:solid;
-border-color:indigo;
+#dark{
+  background-image: url(coral.png);
+  height: 15px;
+  background-repeat: repeat repeat;
+}*/
+
+#app{
+  font-family: 'Raleway', sans-serif;
+  padding-top: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
+body{
+  margin: 0px;
+  background-color: #D7E6E8;
+}
 
-.top {
-    position:absolute;
-    left:0; right:0;
-    height: 92px;
-background-color:gray;
+input{
+font-family: 'Raleway', sans-serif;
 }
-.left {
-    position:absolute;
-    left:0; top:92px; bottom: 0;
-    width: 178px;
+
+input[type=text] {
+background-color: #D7E6E8; /* same as body background */
+  width: 20%;
+  padding: 6px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #D6D2EE; /*light purpleish*/
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+color: #3759A0; /* darkest blue */
 }
-.main {
-    position: absolute;
-    left:178px; top:92px; right:0; bottom:0;
+
+input[type=text]:focus {
+  border: 3px solid #A0CEEB;
 }
+
+input[type=submit] {
+  background-color: #F5C7CA;
+  border: none;
+  color: #3759A0;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+border-radius: 4px;
+  font-size: 20px;
+  height: 34px;
+}
+
+input[type=submit]:hover {
+  background-color: #E679AD;
+  color: #3759A0;
+}
+
+li{
+  list-style-type: none;
+}
+select {
+  border: 3px solid #D6D2EE; 
+background-color: #D7E6E8;
+padding: 0px 35px 5px 5px;
+font-size: 20px;
+height: 34px;
+color: #3759A0;
+outline: none;
+font-family: 'Raleway', sans-serif;
+  width: auto;
+}
+
+/* CAUTION: IE hackery ahead */
+select:focus{
+  border: 3px solid #A0CEEB;
+}
+select:-ms-expand { 
+  display: none; /* remove default arrow on ie10 and ie11 */
+  border: 3px solid #A0CEEB;
+}
+
+#checkList{
+  color: #3759A0;
+  font-size: 20px;
+}
+
+li[priority=5]{
+  color:red;
+}
+/*
+color palette
+#F5C7CA
+#E679AD
+#3759A0
+#A0CEEB
+#D6D2EE
+#D7E6E8
+*/

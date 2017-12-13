@@ -1,53 +1,32 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html ng-app="myApp">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
-    <script src="/javascripts/app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyDz9OM379F4APJ9xX_GMWHnjfgygkrSDQM",
-            authDomain: "auth-868e1.firebaseapp.com",
-            databaseURL: "https:/362/auth-868e1.firebaseio.com",
-            projectId: "auth-868e1",
-            storageBucket: "",
-            messagingSenderId: "675480456503"
-        };
-        firebase.initializeApp(config);
-    </script>
+    <title>User Login and Sessions</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
 
-<body ng-app='myApp' ng-controller='mainCtrl'>
-    <div class="top">
-        <h1 id: "title"> Welcome </h1>
+<body>
+    <div class="form-container" ng-controller="myController">
+        <p id="sectionTitle" class="form-header">User Profile</p>
+        <form method="POST" action="/user/update">
+            <label>Username:</label>
+            <input type="text" id="username" name="username" ng-model="user.username" disabled>
+            <br>
+            <label>Email:</label>
+            <input type="email" id="email" name="email" ng-model="user.email">
+        </form>
     </div>
-
-    <div class="left">
-
-        <h4>Links to Classes</h4>
-        <ul ng-repeat='link in links'>
-            
-        </ul>
-    </div>
-
-    <div class="main">
-        <h2>
-            <src='{{image.url}}'></src>
-        </h2>
-        <hr>
-
-        <h3>Useful Links</h3>
-
-        <ul ng-repeat='main in links'>
-            <li></li>
-        </ul>
-
-    </div>
+    <form method="POST" action="/user/delete">
+        <input type="submit" id="delete" value="Delete User">
+    </form>
+    <hr>
+    <span id="userMsg">
+        <%= msg %>
+    </span>
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <script src="/javascripts/my_app.js"></script>
+    <a id="homeLink" href="/">Home</a>
 </body>
 
 </html>
