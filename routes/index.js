@@ -28,13 +28,6 @@ router.get('/user', function(req, res){
       res.redirect('/login');
     }
 });
-router.get('/signup', function(req, res){
-    console.log("/signup Route");
-    if(req.session.user){
-      res.redirect('/');
-    }
-    res.render('signup', {msg:req.session.msg});
-});
 router.get('/login',  function(req, res){
     console.log("/login Route");
     /*if(req.session.user){
